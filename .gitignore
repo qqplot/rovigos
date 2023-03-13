@@ -136,3 +136,4 @@ log_tensorboard/
 *.out
 
 *.txt
+!requirements.txt
