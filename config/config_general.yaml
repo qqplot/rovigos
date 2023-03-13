@@ -1,0 +1,43 @@
+# Environment settings
+seed: 1234
+state: 'INFO'
+
+# dataset config : General Recommendation
+data_path: '/home/kyubyungchae/recbole/Data'
+dataset: 'rovigos'
+USER_ID_FIELD: user_id
+ITEM_ID_FIELD: item_id
+load_col:
+    inter: [user_id, item_id]
+
+
+# model config
+embedding_size: 64
+
+# Training and evaluation config
+epochs: 1
+train_batch_size: 128
+eval_batch_size: 128
+
+learner: 'adam'
+learning_rate: 0.001
+weight_decay: 0.0
+stopping_step: 10
+weight_decay: 0.0
+
+train_neg_sample_args:
+    distribution: uniform
+    sample_num: 1
+    alpha: 1.0
+    dynamic: False
+    candidate_num: 0
+
+eval_args:
+    group_by: user
+    order: RO
+    split: {'RS': [0.8,0.1,0.1]}
+    mode: full
+metrics: ['MRR', 'NDCG', 'Hit']
+topk: [1, 5, 10]
+valid_metric: NDCG@10
+metric_decimal_place: 4
