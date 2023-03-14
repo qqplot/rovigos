@@ -102,6 +102,6 @@ if __name__ == '__main__':
 
 
     # 결과 저장
-    inter_output.to_csv(data_path + 'rovigos/rovigos_t.inter', sep='\t', header=True, index=False)
-    item_output.to_csv(data_path + 'rovigos/rovigos_t.item', sep='\t', header=True, index=False)
-    user_output.to_csv(data_path + 'rovigos/rovigos_t.user', sep='\t', header=True, index=False, float_format='%.0f')
+    inter_output.to_csv(data_path + 'rovigos/rovigos.inter', sep='\t', header=True, index=False)
+    item_output.to_csv(data_path + 'rovigos/rovigos.item', sep='\t', header=True, index=False)
+    user_output.to_csv(data_path + 'rovigos/rovigos.user', sep='\t', header=True, index=False, float_format='%.0f')
